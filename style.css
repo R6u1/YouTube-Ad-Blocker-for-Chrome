@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Fugaz+One&family=Noto+Sans+Sunuwar&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ||RESET*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+/* ||GENERAL STYLES */
+body {
+    font-family: "Edu NSW ACT Cursive";
+    background-color: wheat;
+    color: #004526;
+    min-height: 300px;
+    width: 250px;
+    box-sizing: border-box;
+}
+
+.header {
+    box-shadow: 0 0 5px black;
+}
+
+.header__h3,
+.header__p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 5px;
+    display: block;
+}
+
+.main__input {
+    background: #ff0000;
+    border-radius: 10em;
+    position: relative;
+    filter: blur(0.5em) contrast(12);
+    box-shadow: 0 0 0 1em #fff;
+    appearance: none;
+    width: 4em;
+    aspect-ratio: 5/2;
+    mix-blend-mode: darken;
+    transition: transform 0.75s cubic-bezier(0.5, 1.85, 0.5, 0.75);
+}
+
+.main__input::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 22% 55%, hsl(67, 100%, 50%) 30%, transparent 70%);
+    transition: transform 0.75s;
+}
+
+.main__input:checked {
+    background: #00ff00;
+    transform: rotate(180deg);
+}
+
+.main__input:checked::before {
+    background: radial-gradient(circle at 22% 55%, hsl(67, 100%, 50%) 30%, transparent 70%);
+    transform: rotate(-360deg);
+}
+
+.main__section {
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+    width: 100px;
+    height: 100px;
+}

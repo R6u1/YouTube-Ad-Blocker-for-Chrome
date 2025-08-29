@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Green Blocker",
+  "version": "1.0",
+  "description": "Blocks YouTube ads",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": ["activeTab", "tabs", "storage", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["https://www.youtube.com/*", "https://youtube.com/*"],
+      "run_at": "document_start"
+    }
+  ]
+}
